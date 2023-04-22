@@ -1,0 +1,45 @@
+﻿@model Core7Egitim.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Silmek istediginizden Eminmisiniz..?</h3>
+<div>
+     
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Aciklama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fİyat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fİyat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kategori)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kategori.Name)
+        </dd>
+    </dl>
+    <br />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Listeye Geri Dön </a>
+    </form>
+</div>

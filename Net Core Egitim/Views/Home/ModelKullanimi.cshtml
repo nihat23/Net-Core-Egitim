@@ -1,0 +1,19 @@
+﻿@model urun
+
+
+Ürün Adı:@Model.Name
+<br />
+Ürün  Fiyat:@Model.UrunFiyat
+<br />
+Ürün Açıklaması :@Model.Aciklama
+<hr />
+<form asp-action="ModelKullanimi">
+    <div asp-validation-summary="All" class="bg-danger"> </div>
+    <input type="text" value="" asp-for="Name"/>
+    <input type="text" value="" asp-for="UrunFiyat" />
+    <input type="text" value="" asp-for="Aciklama" />
+    <br />
+    <input  type="submit" value="Gönder"/>
+
+
+</form>

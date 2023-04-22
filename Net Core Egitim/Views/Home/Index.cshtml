@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@Html.Partial("_Partion")
+<br />
+<partial name="_Partion"></partial><!--NetCore6 ıle gelen yenılık-->
+<br />
+@await Html.PartialAsync("_Partion")
+<hr />
+
+<h2>@ViewBag.UrunAdi</h2>
+<br />
+<h2>@ViewData["vdata"]</h2>
+<br />
+<h2>@TempData["tdata"] TL </h2>
+
+ @ViewBag.UrunAdi
+
+
+ <form asp-action="Index">
+
+     @Html.TextBox("UrunAd")
+     <br />
+     @Html.TextBox("UrunModel")
+     <br />
+     @Html.TextBox("UrunFiyat")
+     <br />
+     <input type="submit" value="Gönder" />
+
+
+ </form>
+
